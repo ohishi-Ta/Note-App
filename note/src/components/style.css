@@ -1,0 +1,217 @@
+body {
+  background: #f8f8f8;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  font-size: 16px;
+  overflow-y: auto;
+}
+@media screen and (max-width: 1000px) {
+  .App {
+    display: block;
+  }
+}
+
+.no-post {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app-sidebar {
+  width: 300px;
+  height: 100vh;
+  -webkit-box-shadow: 2px 0px 10px -5px #777777;
+          box-shadow: 2px 0px 10px -5px #777777;
+  position: fixed;
+}
+@media screen and (max-width: 1000px) {
+  .app-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+}
+.app-sidebar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+.app-sidebar-header button {
+  outline: none;
+  border: none;
+  background: #a436f1;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 3px 15px;
+  border-radius: 9999px;
+  margin-top: 20px;
+}
+.app-sidebar-header button::before {
+  content: "+";
+  font-size: 40px;
+  display: block;
+}
+.app-sidebar-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+@media screen and (max-width: 1000px) {
+  .app-sidebar-title {
+    display: block;
+  }
+}
+.app-sidebar-title strong {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.app-sidebar-title button {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 9999px;
+  background-color: #a436f1;
+  color: #fff;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40px;
+          flex: 0 0 40px;
+}
+@media screen and (max-width: 1000px) {
+  .app-sidebar-title button {
+    display: block;
+    margin: 0 0 0 auto;
+  }
+}
+.app-sidebar-content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.app-sidebar-notes {
+  height: calc(100vh - 185px);
+  overflow-y: auto;
+  text-align: left;
+  padding: 20px;
+  background: #3a3a3a;
+  margin: 10px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1000px) {
+  .app-sidebar-notes {
+    display: -ms-grid;
+    display: grid;
+    gap: 10px;
+    -ms-grid-columns: 50% 10px 50%;
+    grid-template-columns: repeat(2, 50%);
+    height: auto;
+  }
+}
+.app-sidebar-note {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 10px -5px #777777;
+          box-shadow: 0px 0px 10px -5px #777777;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.app-sidebar-note:hover:not(.active) {
+  opacity: 0.6;
+}
+.app-sidebar-note:hover:not(.active) button {
+  opacity: 1;
+}
+.app-sidebar-note.active {
+  background-color: #00927D;
+  color: #fff;
+}
+
+.app-main {
+  width: 70%;
+  padding: 30px;
+  margin-left: 300px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .app-main {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0px;
+  }
+}
+.app-main input {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  display: block;
+  margin: 30px 0;
+  padding: 0 10px;
+}
+@media screen and (max-width: 1000px) {
+  .app-main input {
+    margin: 80px 0 30px 0;
+    padding: 0;
+  }
+}
+.app-main textarea {
+  width: 100%;
+  height: 30vh;
+  font-size: 16px;
+  display: block;
+  resize: none;
+  padding: 10px;
+}
+@media screen and (max-width: 1000px) {
+  .app-main textarea {
+    margin: 0;
+    padding: 0;
+  }
+}
+.app-main-note-preview {
+  margin-top: 100px;
+  overflow-y: auto;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 15px -5px #777777;
+          box-shadow: 0px 0px 15px -5px #777777;
+  border-radius: 10px;
+  padding: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .app-main-note-preview {
+    margin-bottom: 100px;
+  }
+}
